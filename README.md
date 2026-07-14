@@ -4,8 +4,12 @@ A minimal Android app that runs a specific shortcut and immediately exits.
 
 ## How It Works
 
-- **First launch** — the app opens Android's shortcut picker. Choose the shortcut you want (e.g. an Automate flow). The app saves the shortcut's intent.
+- **First launch** — the app shows a short menu of action types:
+  - **System shortcut** — opens Android's shortcut picker. Choose the shortcut you want (e.g. an Automate flow); the app saves its intent.
+  - **App Activity** — pick an installed app, then type the activity class (e.g. `.SettingsActivity`). The app saves an explicit-component intent for it.
 - **Every launch after that** — the app fires the saved intent and exits instantly. No UI shown.
+
+The menu is designed to grow (more action types can be added later).
 
 To reconfigure, clear the app's data (Settings → Apps → Shortcut Executor → Storage → Clear data) and launch again.
 
